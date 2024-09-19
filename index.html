@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: rgb(201, 163, 201);
+        }
+        .container {
+            text-align: left; 
+            max-width: 500px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+        }
+        h1 {
+            text-align: center;
+            color: #00796b; 
+        }
+        label {
+            font-weight: bold; 
+            margin-top: 15px; 
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px; 
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin: 0 5px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 48%;
+            margin: 10px 1%;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #004d40; 
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #00796b;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media screen and (max-width: 1700px) {
+            body {
+                background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTAxcxH7_6UXrGDVPUGxwSnzB9Xj42ALEp-w&s') no-repeat center center fixed ;
+                background-size: cover;
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            body {
+                background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw454E9-MykCmu5S2nOup0bcJuZhb2cY1amw&s')no-repeat center center fixed;
+                background-size: cover;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration</h1>
+        <form action="sign_in.html"  method="get">
+            
+            <label for="first name">First Name</label>
+            <input type="text" id="first name" name="First name" required>
+            <label for="lname">last name</label>
+            <input type="text" id="lname" name="lname" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select...</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <label>Hobbies:</label>
+            <div>
+                <input type="checkbox" name="hobbies" value="Dancing"> Dancing
+                <input type="checkbox" name="hobbies" value="Painting"> Painting
+                <input type="checkbox" name="hobbies" value="Reading"> Reading
+                <input type="checkbox" name="hobbies" value="Singing"> Singing
+            </div>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" cols="20"></textarea>
+
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+        </form>
+        <a href="sign_in.html">go to sign in </a>
+    </div>
+</body>
+</html>
